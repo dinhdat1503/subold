@@ -1,0 +1,127 @@
+.skiptranslate {
+    display: none !important;
+}
+
+html.translated-ltr body,
+html.translated-rtl body {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    top: 0px !important;
+    position: relative !important;
+}
+
+.box-inner {
+    background-color: #007fff;
+    padding: 5px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    color: black;
+    font-weight: bold;
+    font-size: 10px;
+    color: #fff;
+}
+
+.save-per {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 5px;
+    color: black;
+    font-weight: bold;
+    font-size: 10px;
+    color: #fff;
+}
+
+.loader-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(124, 122, 122, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.content {
+    opacity: 1;
+}
+
+.support-pill {
+    position: fixed;
+    bottom: 50px;
+    right: 0;
+    z-index: 1055;
+}
+
+.support-pill-btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 18px;
+    border-radius: 50px 0 0 50px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transform: translateX(60%);
+    width: 120px;
+    transition: all 0.35s ease;
+    overflow: hidden;
+}
+
+.support-pill-btn:hover {
+    transform: translateX(0);
+    box-shadow: 0 6px 18px rgba(0, 139, 139, 0.4);
+}
+
+@keyframes shake {
+    0%,
+    100% {
+        transform: rotate(0deg);
+    }
+
+    20% {
+        transform: rotate(15deg);
+    }
+
+    40% {
+        transform: rotate(-15deg);
+    }
+
+    60% {
+        transform: rotate(10deg);
+    }
+
+    80% {
+        transform: rotate(-10deg);
+    }
+}
+
+.support-pill-btn i {
+    animation: shake 1.5s infinite ease-in-out;
+    transform-origin: center;
+    display: inline-block;
+}
+.pointer {
+    cursor: pointer;
+}
